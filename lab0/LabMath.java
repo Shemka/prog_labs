@@ -17,8 +17,8 @@ public class LabMath{
             for(int j = 0; j < 10; j++){
                 switch (a[i]) {
                     case 13:
-                        float c = (float) atan(pow((x[j] - 5) / 14, 2)) - 1;
-                        float b = (float) pow(atan((x[j] - 5) / 14), 2 * (1 - exp(x[j])));
+                        double c = atan(pow((x[j] - 5) / 14, 2)) - 1;
+                        double b = pow(atan((x[j] - 5) / 14), 2 * (1 - exp(x[j])));
                         new_a[i][j] = (float) pow(sin(cbrt(x[j])), c/b);
                         break;
                     case 5:
@@ -32,14 +32,14 @@ public class LabMath{
                         new_a[i][j] = (float) cos(cos(cos(pow((3 - x[j]) / 2, x[j]))));
                         break;
                 }
-                System.out.printf("%.2f\t", new_a[i][j]);
+                System.out.printf("%.2f \t", new_a[i][j]);
             }
             System.out.println();
         }
         
     }
     private static double getRandom(double min, double max){
-        return Math.random()*((max-min)+1.0)+min;
+        return random()*((max-min)+1.0)+min;
     }
 
 }
